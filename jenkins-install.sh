@@ -8,7 +8,7 @@ jvopt3="-Dhudson.model.DownloadService.noSignatureCheck=true"
 helm install jenkins iac/jenkins \
 --set persistence.existingClaim=jenkins \
 --set master.adminPassword=admin \
---set master.nodeSelector."kubernetes\.io/hostname"=Master \
+--set master.nodeSelector."kubernetes\.io/hostname"=master \
 --set master.tolerations[0].key=node-role.kubernetes.io/master \
 --set master.tolerations[0].effect=NoSchedule \
 --set master.tolerations[0].operator=Exists \
