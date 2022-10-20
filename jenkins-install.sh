@@ -5,7 +5,7 @@ jvopt1="-Duser.timezone=Asia/Seoul"
 jvopt2="-Dcasc.jenkins.config=https://raw.githubusercontent.com/jys94/sources/iac-sources/jenkins-config.yaml"
 jvopt3="-Dhudson.model.DownloadService.noSignatureCheck=true"
 
-helm install jenkins edu/jenkins \
+helm install jenkins iac/jenkins \
 --set persistence.existingClaim=jenkins \
 --set master.adminPassword=admin \
 --set master.nodeSelector."kubernetes\.io/hostname"=m-k8s \
